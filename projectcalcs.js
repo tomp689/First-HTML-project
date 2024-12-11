@@ -46,17 +46,17 @@ function calcResI1() {
 		total = val1 + val2 + val3;
 
 		if (total >= 0 && total <= 2.25) {
-			message = ". More things can be done."
+			message = " -- More things can be done.";
 		}
 		else {
-			message = ". The score is good."
+			message = " -- The score is good.";
 		}
 
 		res = (val1 + val2 + val3) * 0.784;
 		
 		sum += res;
 
-		document.getElementById("i1res").innerHTML = "Result is... " + res + message;
+		document.getElementById("i1res").innerHTML = res + message;
 }
 
 
@@ -71,17 +71,17 @@ function calcResI2() {
 		total = val1 + val2 + val3;
 
 		if (total >= 0 && total <= 2.25) {
-			message = ". More things can be done."
+			message = " -- More things can be done.";
 		}
 		else {
-			message = ". The score is good."
+			message = " -- The score is good.";
 		}
 
 		res = (val1 + val2 + val3) * 0.784;
 		
 		sum += res;
 
-		document.getElementById("i2res").innerHTML = "Result is... " + res + message;
+		document.getElementById("i2res").innerHTML = res + message;
 }
 
 
@@ -106,7 +106,7 @@ function calcResI3() {
 		
 	sum += res;
 			
-	document.getElementById("i3res").innerHTML = "Result is... " + res;
+	document.getElementById("i3res").innerHTML = res;
 }
 
 
@@ -121,17 +121,17 @@ function calcResI4() {
 	total = val1 + val2 + val3;
 
 	if (total >= 0 && total <= 2.25) {
-		message = ". More things can be done."
+		message = " -- More things can be done.";
 	}
 	else {
-		message = ". The score is good."
+		message = " -- The score is good.";
 	}
 
 	res = (val1 + val2 + val3) * 0.42;
 	
 	sum += res;
 
-	document.getElementById("i4res").innerHTML = "Result is... " + res + message;
+	document.getElementById("i4res").innerHTML = res + message;
 }
 
 
@@ -145,17 +145,17 @@ function calcResI5() {
 	total = val1 + val2 + val3;
 
 	if (total >= 0 && total <= 2.25) {
-		message = ". More things can be done."
+		message = " -- More things can be done.";
 	}
 	else {
-		message = ". The score is good."
+		message = " -- The score is good.";
 	}
 
 	res = (val1 + val2 + val3) * 0.42;
 	
 	sum += res;
 	
-	document.getElementById("i5res").innerHTML = "Result is... " + res + message;
+	document.getElementById("i5res").innerHTML = res + message;
 }	
 	
 
@@ -170,17 +170,17 @@ function calcResI6() {
 	total = val1 + val2 + val3;
 
 	if (total >= 0 && total <= 2.25) {
-		message = " . More things can be done."
+		message = " -- More things can be done.";
 	}
 	else {
-		message = " . The score is good."
+		message = " -- The score is good.";
 	}
 
 	res = (val1 + val2 + val3) * 0.337;
 	
 	sum += res;
 	
-	document.getElementById("i6res").innerHTML = "Result is... " + res + message;
+	document.getElementById("i6res").innerHTML = res + message;
 }
 
 
@@ -195,17 +195,17 @@ function calcResI7() {
 	total = val1 + val2 + val3;
 
 	if (total >= 0 && total <= 2.25) {
-		message = " . More things can be done."
+		message = " -- More things can be done.";
 	}
 	else {
-		message = " . The score is good."
+		message = " -- The score is good.";
 	}
 
 	res = (val1 + val2 + val3) * 0.701;
 	
 	sum += res;
 	
-	document.getElementById("i7res").innerHTML = "Result is... " + res + message;
+	document.getElementById("i7res").innerHTML = res + message;
 }
 
 
@@ -230,7 +230,7 @@ function calcResI8() {
 		
 	sum += res;
 			
-	document.getElementById("i8res").innerHTML = "Result is... " + res;
+	document.getElementById("i8res").innerHTML = res;
 }
 
 
@@ -255,7 +255,7 @@ function calcResI9() {
 		
 	sum += res;
 			
-	document.getElementById("i9res").innerHTML = "Result is... " + res;
+	document.getElementById("i9res").innerHTML = res;
 }
 
 
@@ -270,17 +270,17 @@ function calcResI10() {
 	total = val1 + val2 + val3;
 
 	if (total >= 0 && total <= 2) {
-		message = " . More things can be done."
+		message = " -- More things can be done.";
 	}
 	else {
-		message = " . The score is good."
+		message = " -- The score is good.";
 	}
 
 	res = (val1 + val2 + val3) * 0.257;
 	
 	sum += res;
 	
-	document.getElementById("i10res").innerHTML = "Result is... " + res + message;
+	document.getElementById("i10res").innerHTML = res + message;
 }
 
 
@@ -295,17 +295,17 @@ function calcResI11() {
 	total = val1 + val2 + val3;
 
 	if (total >= 0 && total <= 2) {
-		message = " . More things can be done."
+		message = " -- More things can be done.";
 	}
 	else {
-		message = " . The score is good."
+		message = " -- The score is good.";
 	}
 
 	res = (val1 + val2 + val3) * 0.427;
 	
 	sum += res;
 	
-	document.getElementById("i11res").innerHTML = "Result is... " + res + message;
+	document.getElementById("i11res").innerHTML = res + message;
 }
 
 
@@ -320,17 +320,17 @@ function calcResI12() {
 	total = val1 + val2 + val3;
 
 	if (total >= 0 && total <= 2) {
-		message = " . More things can be done."
+		message = " -- More things can be done.";
 	}
 	else {
-		message = " . The score is good."
+		message = " -- The score is good.";
 	}
 
 	res = (val1 + val2 + val3) * 0.123;
 	
 	sum += res;
 	
-	document.getElementById("i12res").innerHTML = "Result is... " + res + message;
+	document.getElementById("i12res").innerHTML = res + message;
 }
 
 
@@ -355,7 +355,7 @@ function calcResI13() {
 		
 	sum += res;
 			
-	document.getElementById("i13res").innerHTML = "Result is... " + res;
+	document.getElementById("i13res").innerHTML = res;
 }
 
 
@@ -370,17 +370,17 @@ function calcResI14() {
 	total = val1 + val2 + val3;
 
 	if (total >= 0 && total <= 2) {
-		message = " . More things can be done."
+		message = " -- More things can be done.";
 	}
 	else {
-		message = " . The score is good."
+		message = " -- The score is good.";
 	}
 
 	res = (val1 + val2 + val3) * 0.448;
 	
 	sum += res;
 	
-	document.getElementById("i14res").innerHTML = "Result is... " + res + message;
+	document.getElementById("i14res").innerHTML = res + message;
 }
 
 
@@ -395,17 +395,17 @@ function calcResI15() {
 	total = val1 + val2 + val3;
 
 	if (total >= 0 && total <= 2) {
-		message = " . More things can be done."
+		message = " -- More things can be done.";
 	}
 	else {
-		message = " . The score is good."
+		message = " -- The score is good.";
 	}
 
 	res = (val1 + val2 + val3) * 0.58;
 	
 	sum += res;
 	
-	document.getElementById("i15res").innerHTML = "Result is... " + res + message;
+	document.getElementById("i15res").innerHTML = res + message;
 }
 
 
@@ -420,17 +420,17 @@ function calcResI16() {
 	total = val1 + val2 + val3;
 
 	if (total >= 0 && total <= 2) {
-		message = " . More things can be done."
+		message = " -- More things can be done.";
 	}
 	else {
-		message = " . The score is good."
+		message = " -- The score is good.";
 	}
 
 	res = (val1 + val2 + val3) * 0.264;
 	
 	sum += res;
 	
-	document.getElementById("i16res").innerHTML = "Result is... " + res + message;
+	document.getElementById("i16res").innerHTML = res + message;
 }
 
 
@@ -455,7 +455,7 @@ function calcResI17() {
 		
 	sum += res;
 			
-	document.getElementById("i17res").innerHTML = "Result is... " + res;
+	document.getElementById("i17res").innerHTML = res;
 }
 
 
@@ -480,7 +480,7 @@ function calcResI18() {
 		
 	sum += res;
 			
-	document.getElementById("i18res").innerHTML = "Result is... " + res;
+	document.getElementById("i18res").innerHTML = res;
 }
 
 
@@ -495,17 +495,17 @@ function calcResI19() {
 	total = val1 + val2 + val3;
 
 	if (total >= 0 && total <= 2) {
-		message = " . More things can be done."
+		message = " -- More things can be done.";
 	}
 	else {
-		message = " . The score is good."
+		message = " -- The score is good.";
 	}
 
 	res = (val1 + val2 + val3) * 1;
 	
 	sum += res;
 	
-	document.getElementById("i19res").innerHTML = "Result is... " + res + message;
+	document.getElementById("i19res").innerHTML = res + message;
 }
 
 
@@ -520,17 +520,17 @@ function calcResI20() {
 	total = val1 + val2 + val3;
 
 	if (total >= 0 && total <= 2.25) {
-		message = " . More things can be done."
+		message = " -- More things can be done.";
 	}
 	else {
-		message = " . The score is good."
+		message = " -- The score is good.";
 	}
 
 	res = (val1 + val2 + val3) * 0.456;
 	
 	sum += res;
 	
-	document.getElementById("i20res").innerHTML = "Result is... " + res + message;
+	document.getElementById("i20res").innerHTML = res + message;
 }
 
 
@@ -545,17 +545,17 @@ function calcResI21() {
 	total = val1 + val2 + val3;
 
 	if (total >= 0 && total <= 2) {
-		message = " . More things can be done."
+		message = " -- More things can be done.";
 	}
 	else {
-		message = " . The score is good."
+		message = " -- The score is good.";
 	}
 
 	res = (val1 + val2 + val3) * 0.535;
 	
 	sum += res;
 	
-	document.getElementById("i21res").innerHTML = "Result is... " + res + message;
+	document.getElementById("i21res").innerHTML = res + message;
 }
 
 
@@ -570,17 +570,17 @@ function calcResI22() {
 	total = val1 + val2 + val3;
 
 	if (total >= 0 && total <= 2) {
-		message = " . More things can be done."
+		message = " -- More things can be done.";
 	}
 	else {
-		message = " . The score is good."
+		message = " -- The score is good.";
 	}
 
 	res = (val1 + val2 + val3) * 0.291;
 	
 	sum += res;
 	
-	document.getElementById("i22res").innerHTML = "Result is... " + res + message;
+	document.getElementById("i22res").innerHTML = res + message;
 }
 
 
@@ -595,17 +595,17 @@ function calcResI23() {
 	total = val1 + val2 + val3;
 
 	if (total >= 0 && total <= 2) {
-		message = " . More things can be done."
+		message = " -- More things can be done.";
 	}
 	else {
-		message = " . The score is good."
+		message = " -- The score is good.";
 	}
 
 	res = (val1 + val2 + val3) * 0.422;
 	
 	sum += res;
 	
-	document.getElementById("i23res").innerHTML = "Result is... " + res + message;
+	document.getElementById("i23res").innerHTML = res + message;
 }
 
 
@@ -630,7 +630,7 @@ function calcResI24() {
 			
 	sum += res;
 	
-	document.getElementById("i24res").innerHTML = "Result is... " + res;
+	document.getElementById("i24res").innerHTML = res;
 }
 
 
@@ -641,17 +641,17 @@ function calcResI25() {
 	var val1 = parseFloat(document.getElementById("i25value1").value);
 
 	if (val1 >= 0 && val1 <= 2.25) {
-		message = ". More things can be done."
+		message = " -- More things can be done.";
 	}
 	else {
-		message = ". The score is good."
+		message = " -- The score is good.";
 	}
 
 	res = val1 * 0.589;
 	
 	sum += res;
 			
-	document.getElementById("i25res").innerHTML = "Result is... " + res + message;
+	document.getElementById("i25res").innerHTML = res + message;
 }
 
 
@@ -666,17 +666,17 @@ function calcResI26() {
 	total = val1 + val2 + val3;
 
 	if (total >= 0 && total <= 2) {
-		message = " . More things can be done."
+		message = " -- More things can be done.";
 	}
 	else {
-		message = " . The score is good."
+		message = " -- The score is good.";
 	}
 
 	res = (val1 + val2 + val3) * 0.411;
 	
 	sum += res;
 	
-	document.getElementById("i26res").innerHTML = "Result is... " + res + message;
+	document.getElementById("i26res").innerHTML = res + message;
 }
 
 
@@ -691,17 +691,17 @@ function calcResI27() {
 	total = val1 + val2 + val3;
 
 	if (total >= 0 && total <= 2) {
-		message = " . More things can be done."
+		message = " -- More things can be done.";
 	}
 	else {
-		message = " . The score is good."
+		message = " -- The score is good.";
 	}
 
 	res = (val1 + val2 + val3) * 1;
 	
 	sum += res;
 	
-	document.getElementById("i27res").innerHTML = "Result is... " + res + message;
+	document.getElementById("i27res").innerHTML = res + message;
 }
 
 
@@ -716,17 +716,17 @@ function calcResI28() {
 	total = val1 + val2 + val3;
 
 	if (total >= 0 && total <= 2) {
-		message = " . More things can be done."
+		message = " -- More things can be done.";
 	}
 	else {
-		message = " . The score is good."
+		message = " -- The score is good.";
 	}
 
 	res = (val1 + val2 + val3) * 1;
 	
 	sum += res;
 	
-	document.getElementById("i28res").innerHTML = "Result is... " + res + message;
+	document.getElementById("i28res").innerHTML = res + message;
 }
 
 
@@ -741,17 +741,17 @@ function calcResI29() {
 	total = val1 + val2 + val3;
 
 	if (total >= 0 && total <= 2) {
-		message = " . More things can be done."
+		message = " -- More things can be done.";
 	}
 	else {
-		message = " . The score is good."
+		message = " -- The score is good.";
 	}
 
 	res = (val1 + val2 + val3) * 1;
 	
 	sum += res;
 	
-	document.getElementById("i29res").innerHTML = "Result is... " + res + message;
+	document.getElementById("i29res").innerHTML = res + message;
 }
 
 
@@ -763,7 +763,7 @@ function calcResI30() {
 	var val2 = parseFloat(document.getElementById("i30value2").value);
 	var val3 = parseFloat(document.getElementById("i30value3").value);
 	var val4 = parseFloat(document.getElementById("i30value4").value);
-
+	
 	publications_ratio_base = val1 / val2;
 	publications_ratio_new = val3 / val4;
 
@@ -776,7 +776,7 @@ function calcResI30() {
 		
 	sum += res;
 			
-	document.getElementById("i30res").innerHTML = "Result is... " + res;
+	document.getElementById("i30res").innerHTML = res;
 }
 
 
@@ -791,17 +791,17 @@ function calcResI31() {
 	total = val1 + val2 + val3;
 
 	if (total >= 0 && total <= 2.25) {
-		message = " . More things can be done."
+		message = " -- More things can be done.";
 	}
 	else {
-		message = " . The score is good."
+		message = " -- The score is good.";
 	}
 
 	res = (val1 + val2 + val3) * 0.322;
 	
 	sum += res;
 	
-	document.getElementById("i31res").innerHTML = "Result is... " + res + message;
+	document.getElementById("i31res").innerHTML = res + message;
 }
 
 
@@ -816,17 +816,17 @@ function calcResI32() {
 	total = val1 + val2 + val3;
 
 	if (total >= 0 && total <= 2.25) {
-		message = " . More things can be done."
+		message = " -- More things can be done.";
 	}
 	else {
-		message = " . The score is good."
+		message = " -- The score is good.";
 	}
 
 	res = (val1 + val2 + val3) * 0.18;
 	
 	sum += res;
 	
-	document.getElementById("i32res").innerHTML = "Result is... " + res + message;
+	document.getElementById("i32res").innerHTML = res + message;
 }
 
 
@@ -841,17 +841,17 @@ function calcResI33() {
 	total = val1 + val2 + val3;
 
 	if (total >= 0 && total <= 2) {
-		message = " . More things can be done."
+		message = " -- More things can be done.";
 	}
 	else {
-		message = " . The score is good."
+		message = " -- The score is good.";
 	}
 
 	res = (val1 + val2 + val3) * 0.114;
 	
 	sum += res;
 	
-	document.getElementById("i33res").innerHTML = "Result is... " + res + message;
+	document.getElementById("i33res").innerHTML = res + message;
 }
 
 
@@ -866,17 +866,17 @@ function calcResI34() {
 	total = val1 + val2 + val3;
 
 	if (total >= 0 && total <= 2) {
-		message = " . More things can be done."
+		message = " -- More things can be done.";
 	}
 	else {
-		message = " . The score is good."
+		message = " -- The score is good.";
 	}
 
 	res = (val1 + val2 + val3) * 0.143;
 	
 	sum += res;
 	
-	document.getElementById("i34res").innerHTML = "Result is... " + res + message;
+	document.getElementById("i34res").innerHTML = res + message;
 }
 
 

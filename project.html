@@ -2,1243 +2,1253 @@
 <html>
 
 <head>
-<link rel="stylesheet" href="test.css">
+<link rel="stylesheet" href="styling.css">
 </head>
 
 <body>
 
 <h1>Calculate score for an institution</h1>
 
-<p>Select values below</p>
+<p> Insert the values for each index, then click "Submit" to get the weighted value for said index. Once you've gotten all the weighted indexes, you can calculate the total rating for the institution.</p>
+
+<table>
+	<tr>
+		<th>Index</th>
+		<th>Values</th>
+		<th>Result</th>
+	</tr>
+	<tr>
+		<td><b>I1</b></td>
+		<td id="i1val">
+			<p id="i1p1">
+				<label for="i1value1">First value:</label>
+					<select name="i1value1" id="i1value1" step="0.01">
+						<option>0</option>
+						<option>0.25</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+			
+			<p id="i1p2">
+				<label for="i1value2">Second value:</label>
+					<select name="i1value2" id="i1value2">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+			
+			<p id="i1p3">
+				<label for="i1value3">Third value:</label>
+					<select name="i1value3" id="i1value3">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
 		
-<p><b>I1</b></p>
-
-<p id="i1p1">
-	<label for="i1value1">Value 1</label>
-		<select name="i1value1" id="i1value1" step="0.01">
-			<option>0</option>
-			<option>0.25</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i1p2">
-	<label for="i1value2">Value 2</label>
-		<select name="i1value2" id="i1value2">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i1p3">
-	<label for="i1value3">Value 3</label>
-		<select name="i1value3" id="i1value3">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<button id="button1" type="button" onclick="calcResI1()">Submit</button>
-
-<p id="i1res">The result is...</p>
-
-
-<p><b>I2</b></p>
-
-<p id="i2p1">
-	<label for="i2value1">Value 1</label>
-		<select name="i2value1" id="i2value1" step="0.01">
-			<option>0</option>
-			<option>0.25</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i2p2">
-	<label for="i2value2">Value 2</label>
-		<select name="i2value2" id="i2value2">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i2p3">
-	<label for="i2value3">Value 3</label>
-		<select name="i2value3" id="i2value3">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<button id="button2" type="button" onclick="calcResI2()">Submit</button>
-
-<p id="i2res">The result is...</p>
-
-
-
-<p><b>I3</b></p>
-
-<p id="i3p1">
-	<label for="i3value1">Food waste in KG in baseline year</label>
-	<form>
-		<input type="number" id="i3value1" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<p id="i3p2">
-	<label for="i3value2">Population in baseline year</label>
-	<form>
-		<input type="number" id="i3value2" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<p id="i3p3">
-	<label for="i3value3">Food waste in KG in 2024</label>
-	<form>
-		<input type="number" id="i3value3" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<p id="i3p4">
-	<label for="i3value4">Campus population in 2024</label>
-	<form>
-		<input type="number" id="i3value4" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<button id="button3" type="button" onclick="calcResI3()">Submit</button>
-
-<p id="i3res">The result is...</p>
-
-
-
-<p><b>I4</b></p>
-
-<p id="i4p1">
-	<label for="i4value1">Value 1</label>
-		<select name="i4value1" id="i4value1" step="0.01">
-			<option>0</option>
-			<option>0.25</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i4p2">
-	<label for="i4value2">Value 2</label>
-		<select name="i4value2" id="i4value2">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i4p3">
-	<label for="i4value3">Value 3</label>
-		<select name="i4value3" id="i4value3">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<button id="button4" type="button" onclick="calcResI4()">Submit</button>
-
-<p id="i4res">The result is...</p>
-
-
+			<button id="button1" type="button" onclick="calcResI1()">Submit</button>
+		
+		</td>
+		<td id="i1res"></td>
+	</tr>
 	
-<p><b>I5</b></p>
+	<tr>
+		<td><b>I2</b></td>
+		<td id="i2val">
+			<p id="i2p1">
+				<label for="i2value1">First value:</label>
+					<select name="i2value1" id="i2value1" step="0.01">
+						<option>0</option>
+						<option>0.25</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
 
-<p id="i5p1">
-	<label for="i5value1">Value 1</label>
-		<select name="i5value1" id="i5value1" step="0.01">
-			<option>0</option>
-			<option>0.25</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
+			<p id="i2p2">
+				<label for="i2value2">Second value:</label>
+					<select name="i2value2" id="i2value2">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
 
-<p id="i5p2">
-	<label for="i5value2">Value 2</label>
-		<select name="i5value2" id="i5value2">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
+			<p id="i2p3">
+				<label for="i2value3">Third value:</label>
+					<select name="i2value3" id="i2value3">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
 
-<p id="i5p3">
-	<label for="i5value3">Value 3</label>
-		<select name="i5value3" id="i5value3">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<button id="button5" type="button" onclick="calcResI5()">Submit</button>
-
-<p id="i5res">The result is...</p>
-
+			<button id="button2" type="button" onclick="calcResI2()">Submit</button>
+		</td>
+		<td id="i2res"></td>
+			
+	</tr>
 	
+	<tr>
+		<td><b>I3</b></td>
+		<td id="i3val">
+			<p id="i3p1">
+				<label for="i3value1">Food waste in KG in baseline year:</label>
+				<form>
+					<input type="number" id="i3value1" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<p id="i3p2">
+				<label for="i3value2">Population in baseline year:</label>
+				<form>
+					<input type="number" id="i3value2" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<p id="i3p3">
+				<label for="i3value3">Food waste in KG in 2024:</label>
+				<form>
+					<input type="number" id="i3value3" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<p id="i3p4">
+				<label for="i3value4">Campus population in 2024:</label>
+				<form>
+					<input type="number" id="i3value4" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<button id="button3" type="button" onclick="calcResI3()">Submit</button>
+		</td>
+		<td id="i3res"></td>
+	</tr>
 	
-<p><b>I6</b></p>
-
-<p id="i6p1">
-	<label for="i6value1">Value 1</label>
-		<select name="i6value1" id="i6value1" step="0.01">
-			<option>0</option>
-			<option>0.25</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i6p2">
-	<label for="i6value2">Value 2</label>
-		<select name="i6value2" id="i6value2">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i6p3">
-	<label for="i6value3">Value 3</label>
-		<select name="i6value3" id="i6value3">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<button id="button6" type="button" onclick="calcResI6()">Submit</button>
-
-<p id="i6res">The result is...</p>
-
-
-
-<p><b>I7</b></p>
-
-<p id="i7p1">
-	<label for="i7value1">Value 1</label>
-		<select name="i7value1" id="i7value1" step="0.01">
-			<option>0</option>
-			<option>0.25</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i7p2">
-	<label for="i7value2">Value 2</label>
-		<select name="i7value2" id="i7value2">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i7p3">
-	<label for="i7value3">Value 3</label>
-		<select name="i7value3" id="i7value3">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<button id="button7" type="button" onclick="calcResI7()">Submit</button>
-
-<p id="i7res">The result is...</p>
-
-
-
-<p><b>I8</b></p>
-
-<p id="i8p1">
-	<label for="i8value1">First year students in baseline year</label>
-	<form>
-		<input type="number" id="i8value1" name="num"><br>
-	</form>
-	<br>
-</p>
-
-
-<p id="i8p2">
-	<label for="i8value2">Graduates in baseline year</label>
-	<form>
-		<input type="number" id="i8value2" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<p id="i8p3">
-	<label for="i8value3">First year students in 2024</label>
-	<form>
-		<input type="number" id="i8value3" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<p id="i8p4">
-	<label for="i8value4">Graduates in 2024</label>
-	<form>
-		<input type="number" id="i8value4" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<button id="button8" type="button" onclick="calcResI8()">Submit</button>
-
-<p id="i8res">The result is...</p>
-
-
-
-<p><b>I9</b></p>
-
-<p id="i9p1">
-	<label for="i9value1">Number of female senior academic staff in baseline year</label>
-	<form>
-		<input type="number" id="i9value1" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<p id="i9p2">
-	<label for="i9value2">Number of senior academic staff in baseline year</label>
-	<form>
-		<input type="number" id="i9value2" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<p id="i9p3">
-	<label for="i9value3">Number of senior academic staff in 2024</label>
-	<form>
-		<input type="number" id="i9value3" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<p id="i9p4">
-	<label for="i9value4">Number of senior academic staff in 2024</label>
-	<form>
-		<input type="number" id="i9value4" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<button id="button9" type="button" onclick="calcResI9()">Submit</button>
-
-<p id="i9res">The result is...</p>
-
-
-
-<p><b>I10</b></p>
-
-<p id="i10p1">
-	<label for="i10value1">Value 1</label>
-		<select name="i10value1" id="i10value1">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i10p2">
-	<label for="i10value2">Value 2</label>
-		<select name="i10value2" id="i10value2">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i10p3">
-	<label for="i10value3">Value 3</label>
-		<select name="i10value3" id="i10value3">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<button id="button10" type="button" onclick="calcResI10()">Submit</button>
-
-<p id="i10res">The result is...</p>
-
-
-
-<p><b>I11</b></p>
-
-<p id="i11p1">
-	<label for="i11value1">Value 1</label>
-		<select name="i11value1" id="i11value1">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i11p2">
-	<label for="i11value2">Value 2</label>
-		<select name="i11value2" id="i11value2">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i11p3">
-	<label for="i11value3">Value 3</label>
-		<select name="i11value3" id="i11value3">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<button id="button11" type="button" onclick="calcResI11()">Submit</button>
-
-<p id="i11res">The result is...</p>
-
-
-
-<p><b>I12</b></p>
-
-<p id="i12p1">
-	<label for="i12value1">Value 1</label>
-		<select name="i12value1" id="i12value1">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i12p2">
-	<label for="i12value2">Value 2</label>
-		<select name="i12value2" id="i12value2">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i12p3">
-	<label for="i12value3">Value 3</label>
-		<select name="i12value3" id="i12value3">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<button id="button12" type="button" onclick="calcResI12()">Submit</button>
-
-<p id="i12res">The result is...</p>
-
-
-
-<p><b>I13</b></p>
-
-<p id="i13p1">
-	<label for="i13value1">Amount of water in cubic meters in baseline year</label>
-	<form>
-		<input type="number" id="i13value1" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<p id="i13p2">
-	<label for="i13value2">Campus population in baseline year</label>
-	<form>
-		<input type="number" id="i13value2" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<p id="i13p3">
-	<label for="i13value3">Amount of water in cubic meters in 2024</label>
-	<form>
-		<input type="number" id="i13value3" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<p id="i13p4">
-	<label for="i13value4">Campus population in 2024</label>
-	<form>
-		<input type="number" id="i13value4" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<button id="button13" type="button" onclick="calcResI13()">Submit</button>
-
-<p id="i13res">The result is...</p>
-
-
-
-<p><b>I14</b></p>
-
-<p id="i14p1">
-	<label for="i14value1">Value 1</label>
-		<select name="i14value1" id="i14value1">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i14p2">
-	<label for="i14value2">Value 2</label>
-		<select name="i14value2" id="i14value2">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i14p3">
-	<label for="i14value3">Value 3</label>
-		<select name="i14value3" id="i14value3">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<button id="button14" type="button" onclick="calcResI14()">Submit</button>
-
-<p id="i14res">The result is...</p>
-
-
-
-<p><b>I15</b></p>
-
-<p id="i15p1">
-	<label for="i15value1">Value 1</label>
-		<select name="i15value1" id="i15value1">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i15p2">
-	<label for="i15value2">Value 2</label>
-		<select name="i15value2" id="i15value2">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i15p3">
-	<label for="i15value3">Value 3</label>
-		<select name="i15value3" id="i15value3">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<button id="button15" type="button" onclick="calcResI15()">Submit</button>
-
-<p id="i15res">The result is...</p>
-
-
-
-<p><b>I16</b></p>
-
-<p id="i16p1">
-	<label for="i16value1">Value 1</label>
-		<select name="i16value1" id="i16value1">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i16p2">
-	<label for="i16value2">Value 2</label>
-		<select name="i16value2" id="i16value2">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i16p3">
-	<label for="i16value3">Value 3</label>
-		<select name="i16value3" id="i16value3">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<button id="button16" type="button" onclick="calcResI16()">Submit</button>
-
-<p id="i16res">The result is...</p>
-
-
-
-<p><b>I17</b></p>
-
-<p id="i17p1">
-	<label for="i17value1">Total energy used in GJ in baseline year</label>
-	<form>
-		<input type="number" id="i17value1" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<p id="i17p2">
-	<label for="i17value2">Floor space of buildings in spuare meters in baseline year</label>
-	<form>
-		<input type="number" id="i17value2" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<p id="i17p3">
-	<label for="i17value3">Total energy used in GJ in 2024</label>
-	<form>
-		<input type="number" id="i17value3" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<p id="i17p4">
-	<label for="i17value4">Floor space of buildings in spuare meters in 2024</label>
-	<form>
-		<input type="number" id="i17value4" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<button id="button17" type="button" onclick="calcResI17()">Submit</button>
-
-<p id="i17res">The result is...</p>
-
-
-
-<p><b>I18</b></p>
-
-<p id="i18p1">
-	<label for="i18value1">Research income in baseline year</label>
-	<form>
-		<input type="number" id="i18value1" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<p id="i18p2">
-	<label for="i18value2">Number of academic staff in baseline year</label>
-	<form>
-		<input type="number" id="i18value2" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<p id="i18p3">
-	<label for="i18value3">Research income in 2024</label>
-	<form>
-		<input type="number" id="i18value3" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<p id="i18p4">
-	<label for="i18value4">Number of academic staff in 2024</label>
-	<form>
-		<input type="number" id="i18value4" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<button id="button18" type="button" onclick="calcResI18()">Submit</button>
-
-<p id="i18res">The result is...</p>
-
-
-
-<p><b>I19</b></p>
-
-<p id="i19p1">
-	<label for="i19value1">Value 1</label>
-		<select name="i19value1" id="i19value1">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i19p2">
-	<label for="i19value2">Value 2</label>
-		<select name="i19value2" id="i19value2">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i19p3">
-	<label for="i19value3">Value 3</label>
-		<select name="i19value3" id="i19value3">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<button id="button19" type="button" onclick="calcResI19()">Submit</button>
-
-<p id="i19res">The result is...</p>
-
-
-
-<p><b>I20</b></p>
-
-<p id="i20p1">
-	<label for="i20value1">Value 1</label>
-		<select name="i20value1" id="i20value1" step="0.01">
-			<option>0</option>
-			<option>0.25</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i20p2">
-	<label for="i20value2">Value 2</label>
-		<select name="i20value2" id="i20value2">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i20p3">
-	<label for="i20value3">Value 3</label>
-		<select name="i20value3" id="i20value3">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<button id="button20" type="button" onclick="calcResI20()">Submit</button>
-
-<p id="i20res">The result is...</p>
-
-
-
-<p><b>I21</b></p>
-
-<p id="i21p1">
-	<label for="i21value1">Value 1</label>
-		<select name="i21value1" id="i21value1">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i21p2">
-	<label for="i21value2">Value 2</label>
-		<select name="i21value2" id="i21value2">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i21p3">
-	<label for="i21value3">Value 3</label>
-		<select name="i21value3" id="i21value3">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<button id="button21" type="button" onclick="calcResI21()">Submit</button>
-
-<p id="i21res">The result is...</p>
-
-
-
-<p><b>I22</b></p>
-
-<p id="i22p1">
-	<label for="i22value1">Value 1</label>
-		<select name="i22value1" id="i22value1">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i22p2">
-	<label for="i22value2">Value 2</label>
-		<select name="i22value2" id="i22value2">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i22p3">
-	<label for="i22value3">Value 3</label>
-		<select name="i22value3" id="i22value3">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<button id="button22" type="button" onclick="calcResI22()">Submit</button>
-
-<p id="i22res">The result is...</p>
-
-
-
-<p><b>I23</b></p>
-
-<p id="i23p1">
-	<label for="i23value1">Value 1</label>
-		<select name="i23value1" id="i23value1">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i23p2">
-	<label for="i23value2">Value 2</label>
-		<select name="i23value2" id="i23value2">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i23p3">
-	<label for="i23value3">Value 3</label>
-		<select name="i23value3" id="i23value3">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<button id="button23" type="button" onclick="calcResI23()">Submit</button>
-
-<p id="i23res">The result is...</p>
-
-
-
-<p><b>I24</b></p>
-
-<p id="i24p1">
-	<label for="i24value1">Amount of waste recycled in baseline year</label>
-	<form>
-		<input type="number" id="i24value1" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<p id="i24p2">
-	<label for="i24value2">Amount of waste generated in baseline year</label>
-	<form>
-		<input type="number" id="i24value2" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<p id="i24p3">
-	<label for="i24value3">Amount of waste recycled in 2024</label>
-	<form>
-		<input type="number" id="i24value3" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<p id="i24p4">
-	<label for="i24value4">Amount of waste generated in 2024</label>
-	<form>
-		<input type="number" id="i24value4" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<button id="button24" type="button" onclick="calcResI24()">Submit</button>
-
-<p id="i24res">The result is...</p>
-
-
-
-<p><b>I25</b></p>
-
-<p id="i25p1">
-	<label for="i25value1">Value</label>
-	<form>
-		<input type="number" id="i25value1" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<button id="button25" type="button" onclick="calcResI25()">Submit</button>
-
-<p id="i25res">The result is...</p>
-
-
-
-<p><b>I26</b></p>
-
-<p id="i26p1">
-	<label for="i26value1">Value 1</label>
-		<select name="i26value1" id="i26value1">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i26p2">
-	<label for="i26value2">Value 2</label>
-		<select name="i26value2" id="i26value2">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i26p3">
-	<label for="i26value3">Value 3</label>
-		<select name="i26value3" id="i26value3">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<button id="button26" type="button" onclick="calcResI26()">Submit</button>
-
-<p id="i26res">The result is...</p>
-
-
-
-<p><b>I27</b></p>
-
-<p id="i27p1">
-	<label for="i27value1">Value 1</label>
-		<select name="i27value1" id="i27value1">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i27p2">
-	<label for="i27value2">Value 2</label>
-		<select name="i27value2" id="i27value2">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i27p3">
-	<label for="i27value3">Value 3</label>
-		<select name="i27value3" id="i27value3">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<button id="button27" type="button" onclick="calcResI27()">Submit</button>
-
-<p id="i27res">The result is...</p>
-
-
-
-<p><b>I28</b></p>
-
-<p id="i28p1">
-	<label for="i28value1">Value 1</label>
-		<select name="i28value1" id="i28value1">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i28p2">
-	<label for="i28value2">Value 2</label>
-		<select name="i28value2" id="i28value2">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i28p3">
-	<label for="i28value3">Value 3</label>
-		<select name="i28value3" id="i28value3">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<button id="button28" type="button" onclick="calcResI28()">Submit</button>
-
-<p id="i28res">The result is...</p>
-
-
-
-<p><b>I29</b></p>
-
-<p id="i29p1">
-	<label for="i29value1">Value 1</label>
-		<select name="i29value1" id="i29value1">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i29p2">
-	<label for="i29value2">Value 2</label>
-		<select name="i29value2" id="i29value2">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i29p3">
-	<label for="i29value3">Value 3</label>
-		<select name="i29value3" id="i29value3">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<button id="button29" type="button" onclick="calcResI29()">Submit</button>
-
-<p id="i29res">The result is...</p>
-
-
-
-<p><b>I30</b></p>
-
-<p id="i30p1">
-	<label for="i30value1">Number of publications in baseline year</label>
-	<form>
-		<input type="number" id="i30value1" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<p id="i30p2">
-	<label for="i30value2">Number of academic staff in baseline year</label>
-	<form>
-		<input type="number" id="i30value2" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<p id="i30p3">
-	<label for="i30value3">Number of publications in 2024</label>
-	<form>
-		<input type="number" id="i30value3" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<p id="i30p4">
-	<label for="i30value4">Number of academic staff in 2024</label>
-	<form>
-		<input type="number" id="i30value4" name="num"><br>
-	</form>
-	<br>
-</p>
-
-<button id="button30" type="button" onclick="calcResI30()">Submit</button>
-
-<p id="i30res">The result is...</p>
-
-
-
-<p><b>I31</b></p>
-
-<p id="i31p1">
-	<label for="i31value1">Value 1</label>
-		<select name="i31value1" id="i31value1" step="0.01">
-			<option>0</option>
-			<option>0.25</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i31p2">
-	<label for="i31value2">Value 2</label>
-		<select name="i31value2" id="i31value2">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i31p3">
-	<label for="i31value3">Value 3</label>
-		<select name="i31value3" id="i31value3">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<button id="button31" type="button" onclick="calcResI31()">Submit</button>
-
-<p id="i31res">The result is...</p>
-
-
-
-<p><b>I32</b></p>
-
-<p id="i32p1">
-	<label for="i32value1">Value 1</label>
-		<select name="i32value1" id="i32value1" step="0.01">
-			<option>0</option>
-			<option>0.25</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i32p2">
-	<label for="i32value2">Value 2</label>
-		<select name="i32value2" id="i32value2">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i32p3">
-	<label for="i32value3">Value 3</label>
-		<select name="i32value3" id="i32value3">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<button id="button32" type="button" onclick="calcResI32()">Submit</button>
-
-<p id="i32res">The result is...</p>
-
-
-
-<p><b>I33</b></p>
-
-<p id="i33p1">
-	<label for="i33value1">Value 1</label>
-		<select name="i33value1" id="i33value1">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i33p2">
-	<label for="i33value2">Value 2</label>
-		<select name="i33value2" id="i33value2">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i33p3">
-	<label for="i33value3">Value 3</label>
-		<select name="i33value3" id="i33value3">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<button id="button33" type="button" onclick="calcResI33()">Submit</button>
-
-<p id="i33res">The result is...</p>
-
-
-
-<p><b>I34</b></p>
-
-<p id="i34p1">
-	<label for="i34value1">Value 1</label>
-		<select name="i34value1" id="i34value1">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i34p2">
-	<label for="i34value2">Value 2</label>
-		<select name="i34value2" id="i34value2">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<p id="i34p3">
-	<label for="i34value3">Value 3</label>
-		<select name="i34value3" id="i34value3">
-			<option>0</option>
-			<option>1</option>
-		</select>
-		<br>
-</p>
-
-<button id="button34" type="button" onclick="calcResI34()">Submit</button>
-
-<p id="i34res">The result is...</p>
-
-
-
-<p id="final">
-	<label>Calculate the total score</label>
-</p>
-
-<button id="finalbutton" type="button" onclick="showTotal()">Calculate</button>
+	<tr>
+		<td><b>I4</b></td>
+		<td id="i4val">
+			<p id="i4p1">
+				<label for="i4value1">First value:</label>
+					<select name="i4value1" id="i4value1" step="0.01">
+						<option>0</option>
+						<option>0.25</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i4p2">
+				<label for="i4value2">Second value:</label>
+					<select name="i4value2" id="i4value2">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i4p3">
+				<label for="i4value3">Third value:</label>
+					<select name="i4value3" id="i4value3">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<button id="button4" type="button" onclick="calcResI4()">Submit</button>
+			
+		</td>
+		<td id="i4res"></td>
+	</tr>
+	
+	<tr>
+		<td><b>I5</b></td>
+		<td id="i5val">
+			<p id="i5p1">
+				<label for="i5value1">First value:</label>
+					<select name="i5value1" id="i5value1" step="0.01">
+						<option>0</option>
+						<option>0.25</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i5p2">
+				<label for="i5value2">Second value:</label>
+					<select name="i5value2" id="i5value2">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i5p3">
+				<label for="i5value3">Third value:</label>
+					<select name="i5value3" id="i5value3">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<button id="button5" type="button" onclick="calcResI5()">Submit</button>
+		</td>
+		<td id="i5res"></td>
+	</tr>
+	
+	<tr>
+		<td><b>I6</b></td>
+		<td id="i6val">
+			<p id="i6p1">
+				<label for="i6value1">First value:</label>
+					<select name="i6value1" id="i6value1" step="0.01">
+						<option>0</option>
+						<option>0.25</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i6p2">
+				<label for="i6value2">Second value:</label>
+					<select name="i6value2" id="i6value2">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i6p3">
+				<label for="i6value3">Third value:</label>
+					<select name="i6value3" id="i6value3">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<button id="button6" type="button" onclick="calcResI6()">Submit</button>
+		</td>
+		<td id="i6res"></p>
+	</tr>
+	
+	<tr>
+		<td><b>I7</b></td>
+		<td id="i7val">
+			<p id="i7p1">
+				<label for="i7value1">First value:</label>
+					<select name="i7value1" id="i7value1" step="0.01">
+						<option>0</option>
+						<option>0.25</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i7p2">
+				<label for="i7value2">Second value:</label>
+					<select name="i7value2" id="i7value2">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i7p3">
+				<label for="i7value3">Third value:</label>
+					<select name="i7value3" id="i7value3">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<button id="button7" type="button" onclick="calcResI7()">Submit</button>
+		</td>
+		<td id="i7res"></td>
+	</tr>
+	
+	<tr>
+		<td><b>I8</b></td>
+		<td id="i8val">
+			<p id="i8p1">
+				<label for="i8value1">First year students in baseline year:</label>
+				<form>
+					<input type="number" id="i8value1" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+
+			<p id="i8p2">
+				<label for="i8value2">Graduates in baseline year:</label>
+				<form>
+					<input type="number" id="i8value2" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<p id="i8p3">
+				<label for="i8value3">First year students in 2024:</label>
+				<form>
+					<input type="number" id="i8value3" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<p id="i8p4">
+				<label for="i8value4">Graduates in 2024:</label>
+				<form>
+					<input type="number" id="i8value4" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<button id="button8" type="button" onclick="calcResI8()">Submit</button>
+		</td>
+		<td id="i8res"></td>			
+	</tr>
+	
+	<tr>
+		<td><b>I9</b></td>
+		<td id="i9val">
+			<p id="i9p1">
+				<label for="i9value1">Number of female senior academic staff in baseline year:</label>
+				<form>
+					<input type="number" id="i9value1" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<p id="i9p2">
+				<label for="i9value2">Number of senior academic staff in baseline year:</label>
+				<form>
+					<input type="number" id="i9value2" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<p id="i9p3">
+				<label for="i9value3">Number of senior academic staff in 2024:</label>
+				<form>
+					<input type="number" id="i9value3" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<p id="i9p4">
+				<label for="i9value4">Number of senior academic staff in 2024:</label>
+				<form>
+					<input type="number" id="i9value4" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<button id="button9" type="button" onclick="calcResI9()">Submit</button>
+		</td>
+		<td id="i9res"></td>	
+	</tr>
+	
+	<tr>
+		<td><b>I10</b></td>
+		<td id="i10val">
+			<p id="i10p1">
+				<label for="i10value1">First value:</label>
+					<select name="i10value1" id="i10value1">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i10p2">
+				<label for="i10value2">Second value:</label>
+					<select name="i10value2" id="i10value2">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i10p3">
+				<label for="i10value3">Third value:</label>
+					<select name="i10value3" id="i10value3">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<button id="button10" type="button" onclick="calcResI10()">Submit</button>
+		</td>
+		<td id="i10res"></td>	
+	</tr>
+	
+	<tr>
+		<td><b>I11</b></td>
+		<td id="i11val">
+			<p id="i11p1">
+				<label for="i11value1">First value:</label>
+					<select name="i11value1" id="i11value1">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i11p2">
+				<label for="i11value2">Second value:</label>
+					<select name="i11value2" id="i11value2">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i11p3">
+				<label for="i11value3">Third value:</label>
+					<select name="i11value3" id="i11value3">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<button id="button11" type="button" onclick="calcResI11()">Submit</button>
+		</td>
+		<td id="i11res"></td>
+	</tr>
+	
+	<tr>
+		<td><b>I12</b></td>
+		<td id="i12val">
+			<p id="i12p1">
+				<label for="i12value1">First value:</label>
+					<select name="i12value1" id="i12value1">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i12p2">
+				<label for="i12value2">Second value:</label>
+					<select name="i12value2" id="i12value2">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i12p3">
+				<label for="i12value3">Third value:</label>
+					<select name="i12value3" id="i12value3">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<button id="button12" type="button" onclick="calcResI12()">Submit</button>
+		</td>
+		<td id="i12res"></td>
+	</tr>
+	
+	<tr>
+		<td><b>I13</b></td>
+		<td id="i13val">
+			<p id="i13p1">
+				<label for="i13value1">Amount of water in cubic meters in baseline year:</label>
+				<form>
+					<input type="number" id="i13value1" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<p id="i13p2">
+				<label for="i13value2">Campus population in baseline year:</label>
+				<form>
+					<input type="number" id="i13value2" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<p id="i13p3">
+				<label for="i13value3">Amount of water in cubic meters in 2024:</label>
+				<form>
+					<input type="number" id="i13value3" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<p id="i13p4">
+				<label for="i13value4">Campus population in 2024:</label>
+				<form>
+					<input type="number" id="i13value4" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<button id="button13" type="button" onclick="calcResI13()">Submit</button>
+		</td>
+		<td id="i13res"></td>			
+	</tr>
+	
+	<tr>
+		<td><b>I14</b></td>
+		<td id="i14val">	
+			<p id="i14p1">
+				<label for="i14value1">First value:</label>
+					<select name="i14value1" id="i14value1">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i14p2">
+				<label for="i14value2">Second value:</label>
+					<select name="i14value2" id="i14value2">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i14p3">
+				<label for="i14value3">Third value:</label>
+					<select name="i14value3" id="i14value3">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<button id="button14" type="button" onclick="calcResI14()">Submit</button>
+		</td>
+		<td id="i14res"></td>
+	</tr>
+	
+	<tr>
+		<td><b>I15</b></td>
+		<td id="i15val">
+			<p id="i15p1">
+				<label for="i15value1">First value:</label>
+					<select name="i15value1" id="i15value1">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i15p2">
+				<label for="i15value2">Second value:</label>
+					<select name="i15value2" id="i15value2">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i15p3">
+				<label for="i15value3">Third value:</label>
+					<select name="i15value3" id="i15value3">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<button id="button15" type="button" onclick="calcResI15()">Submit</button>
+		</td>
+		<td id="i15res"></td>
+	</tr>
+	
+	<tr>
+		<td><b>I16</b></td>
+		<td id="i16val">
+			<p id="i16p1">
+				<label for="i16value1">First value:</label>
+					<select name="i16value1" id="i16value1">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i16p2">
+				<label for="i16value2">Second value:</label>
+					<select name="i16value2" id="i16value2">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i16p3">
+				<label for="i16value3">Third value:</label>
+					<select name="i16value3" id="i16value3">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<button id="button16" type="button" onclick="calcResI16()">Submit</button>
+		</td>
+		<td id="i16res"></td>
+	</tr>
+	
+	<tr>
+		<td><b>I17</b></td>
+		<td id="i17val">
+			<p id="i17p1">
+				<label for="i17value1">Total energy used in GJ in baseline year:</label>
+				<form>
+					<input type="number" id="i17value1" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<p id="i17p2">
+				<label for="i17value2">Floor space of buildings in spuare meters in baseline year:</label>
+				<form>
+					<input type="number" id="i17value2" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<p id="i17p3">
+				<label for="i17value3">Total energy used in GJ in 2024:</label>
+				<form>
+					<input type="number" id="i17value3" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<p id="i17p4">
+				<label for="i17value4">Floor space of buildings in spuare meters in 2024:</label>
+				<form>
+					<input type="number" id="i17value4" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<button id="button17" type="button" onclick="calcResI17()">Submit</button>
+		</td>
+		<td id="i17res"></td>
+	</tr>
+	
+	<tr>
+		<td><b>I18</b></td>
+		<td id="i18val">
+			<p id="i18p1">
+				<label for="i18value1">Research income in baseline year:</label>
+				<form>
+					<input type="number" id="i18value1" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<p id="i18p2">
+				<label for="i18value2">Number of academic staff in baseline year:</label>
+				<form>
+					<input type="number" id="i18value2" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<p id="i18p3">
+				<label for="i18value3">Research income in 2024:</label>
+				<form>
+					<input type="number" id="i18value3" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<p id="i18p4">
+				<label for="i18value4">Number of academic staff in 2024:</label>
+				<form>
+					<input type="number" id="i18value4" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<button id="button18" type="button" onclick="calcResI18()">Submit</button>
+		</td>
+		<td id="i18res"></td>
+	</tr>
+	
+	<tr>
+		<td><b>I19</b></td>
+		<td id="i19val">
+			<p id="i19p1">
+				<label for="i19value1">First value:</label>
+					<select name="i19value1" id="i19value1">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i19p2">
+				<label for="i19value2">Second value:</label>
+					<select name="i19value2" id="i19value2">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i19p3">
+				<label for="i19value3">Third value:</label>
+					<select name="i19value3" id="i19value3">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<button id="button19" type="button" onclick="calcResI19()">Submit</button>
+		</td>
+		<td id="i19res"></td>
+	</tr>
+	
+	<tr>
+		<td><b>I20</b></td>
+		<td id="i20val">
+			<p id="i20p1">
+				<label for="i20value1">First value:</label>
+					<select name="i20value1" id="i20value1" step="0.01">
+						<option>0</option>
+						<option>0.25</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i20p2">
+				<label for="i20value2">Second value:</label>
+					<select name="i20value2" id="i20value2">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i20p3">
+				<label for="i20value3">Third value:</label>
+					<select name="i20value3" id="i20value3">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<button id="button20" type="button" onclick="calcResI20()">Submit</button>
+		</td>
+		<td id="i20res"></td>
+	</tr>
+	
+	<tr>
+		<td><b>I21</b></td>
+		<td id="i21val">
+			<p id="i21p1">
+				<label for="i21value1">First value:</label>
+					<select name="i21value1" id="i21value1">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i21p2">
+				<label for="i21value2">Second value:</label>
+					<select name="i21value2" id="i21value2">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i21p3">
+				<label for="i21value3">Third value:</label>
+					<select name="i21value3" id="i21value3">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<button id="button21" type="button" onclick="calcResI21()">Submit</button>
+		</td>
+		<td id="i21res"></td>
+	</tr>
+	
+	<tr>
+		<td><b>I22</b></td>
+		<td id="i22val">
+			<p id="i22p1">
+				<label for="i22value1">First value:</label>
+					<select name="i22value1" id="i22value1">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i22p2">
+				<label for="i22value2">Second value:</label>
+					<select name="i22value2" id="i22value2">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i22p3">
+				<label for="i22value3">Third value:</label>
+					<select name="i22value3" id="i22value3">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<button id="button22" type="button" onclick="calcResI22()">Submit</button>
+		</td>
+		<td id="i22res"></td>
+	</tr>
+	
+	<tr>
+		<td><b>I23</b></td>
+		<td id="i23val">
+			<p id="i23p1">
+				<label for="i23value1">First value:</label>
+					<select name="i23value1" id="i23value1">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i23p2">
+				<label for="i23value2">Second value:</label>
+					<select name="i23value2" id="i23value2">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i23p3">
+				<label for="i23value3">Third value:</label>
+					<select name="i23value3" id="i23value3">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<button id="button23" type="button" onclick="calcResI23()">Submit</button>
+		</td>
+		<td id="i23res"></td>
+	</tr>
+	
+	<tr>
+		<td><b>I24</b></td>
+		<td id="i24val">
+			<p id="i24p1">
+				<label for="i24value1">Amount of waste recycled in baseline year:</label>
+				<form>
+					<input type="number" id="i24value1" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<p id="i24p2">
+				<label for="i24value2">Amount of waste generated in baseline year:</label>
+				<form>
+					<input type="number" id="i24value2" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<p id="i24p3">
+				<label for="i24value3">Amount of waste recycled in 2024:</label>
+				<form>
+					<input type="number" id="i24value3" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<p id="i24p4">
+				<label for="i24value4">Amount of waste generated in 2024:</label>
+				<form>
+					<input type="number" id="i24value4" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<button id="button24" type="button" onclick="calcResI24()">Submit</button>
+		</td>
+		<td id="i24res"></td>
+	</tr>
+	
+	<tr>
+		<td><b>I25</b></td>
+		<td id="i25val">
+			<p id="i25p1">
+				<label for="i25value1">Value:</label>
+				<form>
+					<input type="number" id="i25value1" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<button id="button25" type="button" onclick="calcResI25()">Submit</button>
+		</td>
+		<td id="i25res"></td>
+	</tr>
+	
+	<tr>
+		<td><b>I26</b></td>
+		<td id="i26val">
+			<p id="i26p1">
+				<label for="i26value1">First value:</label>
+					<select name="i26value1" id="i26value1">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i26p2">
+				<label for="i26value2">Second value:</label>
+					<select name="i26value2" id="i26value2">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i26p3">
+				<label for="i26value3">Third value:</label>
+					<select name="i26value3" id="i26value3">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<button id="button26" type="button" onclick="calcResI26()">Submit</button>
+		</td>
+		<td id="i26res"></td>
+	</tr>
+	
+	<tr>
+		<td><b>I27</b></td>
+		<td id="i27val">
+			<p id="i27p1">
+				<label for="i27value1">First value:</label>
+					<select name="i27value1" id="i27value1">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i27p2">
+				<label for="i27value2">Second value:</label>
+					<select name="i27value2" id="i27value2">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i27p3">
+				<label for="i27value3">Third value:</label>
+					<select name="i27value3" id="i27value3">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<button id="button27" type="button" onclick="calcResI27()">Submit</button>
+		</td>
+		<td id="i27res"></td>
+	</tr>
+	
+	<tr>
+		<td><b>I28</b></td>
+		<td id="i28val">
+			<p id="i28p1">
+				<label for="i28value1">First value:</label>
+					<select name="i28value1" id="i28value1">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i28p2">
+				<label for="i28value2">Second value:</label>
+					<select name="i28value2" id="i28value2">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i28p3">
+				<label for="i28value3">Third value:</label>
+					<select name="i28value3" id="i28value3">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<button id="button28" type="button" onclick="calcResI28()">Submit</button>
+		</td>
+		<td id="i28res"></td>
+	</tr>
+	
+	<tr>
+		<td><b>I29</b></td>
+		<td id="i29val">
+			<p id="i29p1">
+				<label for="i29value1">First value:</label>
+					<select name="i29value1" id="i29value1">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i29p2">
+				<label for="i29value2">Second value:</label>
+					<select name="i29value2" id="i29value2">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i29p3">
+				<label for="i29value3">Third value:</label>
+					<select name="i29value3" id="i29value3">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<button id="button29" type="button" onclick="calcResI29()">Submit</button>
+		</td>
+		<td id="i29res"></td>
+	</tr>
+	
+	<tr>
+		<td><b>I30</b></td>
+		<td id="i30val">
+			<p id="i30p1">
+				<label for="i30value1">Number of publications in baseline year:</label>
+				<form>
+					<input type="number" id="i30value1" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<p id="i30p2">
+				<label for="i30value2">Number of academic staff in baseline year:</label>
+				<form>
+					<input type="number" id="i30value2" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<p id="i30p3">
+				<label for="i30value3">Number of publications in 2024:</label>
+				<form>
+					<input type="number" id="i30value3" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<p id="i30p4">
+				<label for="i30value4">Number of academic staff in 2024:</label>
+				<form>
+					<input type="number" id="i30value4" name="num"><br>
+				</form>
+				<br>
+			</p>
+
+			<button id="button30" type="button" onclick="calcResI30()">Submit</button>
+		</td>
+		<td id="i30res"></td>
+	</tr>
+	
+	<tr>
+		<td><b>I31</b></td>
+		<td id="i31val">
+			<p id="i31p1">
+				<label for="i31value1">First value:</label>
+					<select name="i31value1" id="i31value1" step="0.01">
+						<option>0</option>
+						<option>0.25</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i31p2">
+				<label for="i31value2">Second value:</label>
+					<select name="i31value2" id="i31value2">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i31p3">
+				<label for="i31value3">Third value:</label>
+					<select name="i31value3" id="i31value3">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<button id="button31" type="button" onclick="calcResI31()">Submit</button>
+		</td>
+		<td id="i31res"></td>
+	</tr>
+	
+	<tr>
+		<td><b>I32</b></td>
+		<td id="i32val">
+			<p id="i32p1">
+				<label for="i32value1">First value:</label>
+					<select name="i32value1" id="i32value1" step="0.01">
+						<option>0</option>
+						<option>0.25</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i32p2">
+				<label for="i32value2">Second value:</label>
+					<select name="i32value2" id="i32value2">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i32p3">
+				<label for="i32value3">Third value:</label>
+					<select name="i32value3" id="i32value3">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<button id="button32" type="button" onclick="calcResI32()">Submit</button>
+		</td>
+		<td id="i32res"></td>
+	</tr>
+	
+	<tr>
+		<td><b>I33</b></td>
+		<td id="i33val">
+			<p id="i33p1">
+				<label for="i33value1">First value:</label>
+					<select name="i33value1" id="i33value1">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i33p2">
+				<label for="i33value2">Second value:</label>
+					<select name="i33value2" id="i33value2">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i33p3">
+				<label for="i33value3">Third value:</label>
+					<select name="i33value3" id="i33value3">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<button id="button33" type="button" onclick="calcResI33()">Submit</button>
+		</td>
+		<td id="i33res"></td>
+	</tr>
+	
+	<tr>
+		<td><b>I34</b></td>
+		<td id="i34val">
+			<p id="i34p1">
+				<label for="i34value1">First value:</label>
+					<select name="i34value1" id="i34value1">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i34p2">
+				<label for="i34value2">Second value:</label>
+					<select name="i34value2" id="i34value2">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<p id="i34p3">
+				<label for="i34value3">Third value:</label>
+					<select name="i34value3" id="i34value3">
+						<option>0</option>
+						<option>1</option>
+					</select>
+					<br>
+			</p>
+
+			<button id="button34" type="button" onclick="calcResI34()">Submit</button>
+		</td>
+		<td id="i34res"></td>
+	</tr>
+</table>
+
+<p id="final">Calculate the total score</p>
+
+<div class="container">
+	<button id="finalbutton" type="button" onclick="showTotal()">Calculate</button>
+</div>
 
 <p id="totalscore">The total score is...</p>
-
 
 <script type="text/javascript" src="projectcalcs.js"></script>									
 
